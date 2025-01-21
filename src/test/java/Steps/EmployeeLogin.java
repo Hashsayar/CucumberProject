@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import static org.junit.Assert.assertEquals;
 
 public class EmployeeLogin {
-public WebDriver driver;
+public static WebDriver driver;
 
     @Given("user navigates the HRMs application")
     public void user_navigates_the_hr_ms_application() {
@@ -43,6 +43,7 @@ public WebDriver driver;
         String errorText = errorMsg.getText();
         String expectedMassage = "Username cannot be empty";
         assertEquals(expectedMassage, errorText);
+        System.out.println(expectedMassage);
     }
 
 }
